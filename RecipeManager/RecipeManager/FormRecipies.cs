@@ -24,7 +24,7 @@ namespace ViewerRecipeManager
         {
             InitializeComponent();
             presenter = new RecipiesPresenter(this);
-            GetDBRecipiesFromPresener();
+            GetDBRecipiesFromPresenter();
         }
 
 
@@ -33,13 +33,12 @@ namespace ViewerRecipeManager
         public event EventHandler<Recipe> DeletingRecipy;
         public event EventHandler<Recipe> AddingRecipy;
         public event EventHandler<Recipe> UpdatingRecipy;
-        //public event EventHandler< List<Recipe>> SaveRecipies;
 
         public event Action<List<Recipe>, string> SaveRecipiesToFile;
         public event Action<string> LoadRecipiesFromFile;
 
 
-        void GetDBRecipiesFromPresener()
+        void GetDBRecipiesFromPresenter()
         {
             presenter.GetRecipeisFromDB();
         }
@@ -188,7 +187,7 @@ namespace ViewerRecipeManager
             List<Category> withoutAllCategory = categories.Where(x => x.Id != GetCategoryForAllFind().Id).ToList();
             List<Product> withoutAllProduct = products.Where(x => x.Id != GetProductForAllFind().Id).ToList();
 
-            FormAddNewRecipe formAddNewRecipe = new FormAddNewRecipe(withoutAllCategory, withoutAllProduct, recipe);
+            FormAddNewRecipe formAddNewRecipe = new FormAddNewRecipe(withoutAllCategory, withoutAllProduct, recipe, recipes);
             formAddNewRecipe.ShowDialog();
 
             if (formAddNewRecipe.DialogResult == DialogResult.Cancel) return null;

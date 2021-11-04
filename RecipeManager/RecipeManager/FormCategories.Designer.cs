@@ -71,6 +71,7 @@ namespace RecipeManager
             this.button1AddNewCategory.TabIndex = 2;
             this.button1AddNewCategory.Text = "Добавить";
             this.button1AddNewCategory.UseVisualStyleBackColor = true;
+            this.button1AddNewCategory.Click += new System.EventHandler(this.button1AddNewCategory_Click);
             // 
             // label2
             // 

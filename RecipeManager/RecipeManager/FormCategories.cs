@@ -105,7 +105,6 @@ namespace RecipeManager
             }
 
             AddingCategoryName(this, name);
-            //todo Не стирать, если произошла ошибка
             textBox1NewCategory.Clear();
         }
 
@@ -169,6 +168,11 @@ namespace RecipeManager
             if (form.DialogResult == DialogResult.Cancel) return;
 
             UpdatingCategory?.Invoke(this, form.Category);
+        }
+
+        private void button1AddNewCategory_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

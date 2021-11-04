@@ -317,6 +317,7 @@ namespace ViewerRecipeManager
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label7.Location = new System.Drawing.Point(111, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 15);
@@ -327,11 +328,12 @@ namespace ViewerRecipeManager
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(64, 162);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(67, 162);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(207, 15);
+            this.label8.Size = new System.Drawing.Size(201, 15);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Поиск по катешориям и продуктам:";
+            this.label8.Text = "Поиск по категориям и продуктам:";
             // 
             // label4
             // 

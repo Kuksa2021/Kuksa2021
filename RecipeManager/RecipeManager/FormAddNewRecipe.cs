@@ -17,14 +17,16 @@ namespace RecipeManager
 
         List<Category> categories;
         List<Product> products;
+        List<Recipe> recipes;
         public Recipe NewRecipe { get; protected set; }
 
-        public FormAddNewRecipe(List<Category> categories, List<Product> products, Recipe reciveRecipe)
+        public FormAddNewRecipe(List<Category> categories, List<Product> products, Recipe reciveRecipe, List<Recipe> recipes)
         {
             InitializeComponent();
             
             this.categories = categories;
             this.products = products;
+            this.recipes = recipes;
 
             ShowMeasurementUnit(comboBox2MeasurementUnit);
             ShowCategories(this.categories, comboBox1Group);
@@ -181,6 +183,13 @@ namespace RecipeManager
             if(comboBox1Group.SelectedItem is null)
             {
                 MessageBox.Show("Не выбрали группу!");
+                return;
+            }
+
+            
+            if (recipes.FindIndex(x=>x.Name.ToLower()== textBox1RecipeName.Text.ToLower())>=0)
+            {
+                MessageBox.Show("Измените название! Рецепт с таким названием уже есть в БД!");
                 return;
             }
 
